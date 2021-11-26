@@ -1,0 +1,21 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build style.css -o src/views/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitlab.bit-academy.nl:644425f5-de0a-11ea-b861-cec41367f4e7/47b537f8-e05e-11ea-b861-cec41367f4e7/What-To-Do-511563e4-5a8f672c.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
+  }
+}

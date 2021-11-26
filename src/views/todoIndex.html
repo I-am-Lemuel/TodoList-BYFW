@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="/tailwind.css" />
+    <link rel="stylesheet" href="/style.css" />
+    "
+  </head>
+
+  <body>
+    <div
+      class="
+        h-100
+        w-full
+        flex
+        items-center
+        justify-center
+        bg-teal-lightest
+        font-sans
+      "
+    >
+      <div class="bg-white rounded shadow p-6 m-9 w-full lg:w-3/4 lg:max-w-lg">
+        <nav class="flex items-center justify-between flex-wrap m-9">
+          <a href="../">back</a>
+          <h1>todo</h1>
+          <a href="add">Add new</a>
+        </nav>
+        <ul class="mb-7">
+          {% for todoItem in todoItems %}
+          <li class="dropzone" id="{{ todoItem.pos }}" draggable="true">
+            <span class="max-w-0 mb-1"> {{ todoItem.item }} </span>
+            <button
+              id="btn-done"
+              class="
+                md:grid-row
+                p-2
+                ml-12
+                mr-2
+                border-2
+                rounded
+                hover:text-white
+                text-green-700
+                border-green-700
+                hover:bg-green-700
+              "
+              role="button"
+            >
+              done
+            </button>
+            <button
+              id="btn-remove"
+              class="
+                p-2
+                ml-2
+                border-2
+                rounded
+                text-red-700
+                border-red-700
+                hover:text-white hover:bg-red-700
+              "
+              role="button"
+            >
+              remove
+            </button>
+          </li>
+          {% endfor %}
+        </ul>
+        <p><a href="/todo/logout">login/logout</a></p>
+        <script src="/src/views/scripts.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
